@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src="" title="Visually Go, Go" >
+<img style="border-radius:10px;" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/Intro.png?raw=true" title="Visually Go, Go" >
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@ removeThe1s(): get rid of the 1('s).
 
 longInput(): throw of exception in the case of more than 4 digits as input.
 
-<img align="right" src="" title="successful test cases" >
+<img style="border-radius:10px;" align="right" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/unitTest.jpg?raw=true" title="successful test cases" >
 
 test1Number(): just the normal output when 1 digit is entered.
 
@@ -44,7 +44,7 @@ test2Numbers(): more output to be tested in case of entered 2 digits.
 
 
 
-> ⚠️ If somehow you can't add the library for test cases (like me) then follow [this][1]guide to add it manually.
+> ⚠️ If somehow you can't add the library for test cases (like me) then follow [this][1] guide to add it manually.
 
 [1]: https://www.jetbrains.com/help/idea/testing.html#ij-add-library "here comes the help"
 
