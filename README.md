@@ -30,11 +30,11 @@ Also it was a good practice to make test cases in new a language as Java (despit
 
 There are **5 unit tests** made to make sure it covers as many possibilities for input (including exceptions).
 
+<img style="border-radius:10px;" align="right" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/unitTest.jpg?raw=true" title="successful test cases" >
+
 removeThe1s(): get rid of the 1('s).
 
 longInput(): throw of exception in the case of more than 4 digits as input.
-
-<img style="border-radius:10px;" align="right" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/unitTest.jpg?raw=true" title="successful test cases" >
 
 test1Number(): just the normal output when 1 digit is entered.
 
