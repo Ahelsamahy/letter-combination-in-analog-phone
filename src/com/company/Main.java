@@ -3,6 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.HashMap;  // to use dictionary
 import java.util.List;
+import java.util.regex.Pattern;
 
 import Exception.outOfScope;
 
@@ -28,26 +29,33 @@ public class Main {
 
         List<String> result = new ArrayList<String>();
 
+
+        //If it isn't numbers only, then it might at least have some numbers inside that can be used.
+        if (!digits.matches("^[0-9]*$")) {
+            digits = digits.replaceAll("[^\\d.]", "");
+            //In case it managed to remove everything but there are numbers left
+            if (digits.matches("[0-9]+")) {
+                System.out.println("alphabet has been detected in the input, removing them and proceed with numbers only " + digits);
+            } else {
+                throw new outOfScope("please enter at least one number, do not enter any special character or alphabet");
+            }
+        }
+
+        //When the user enters a digits that include 1, then it will be removed and not return empty list
+        if (digits.contains("1")) {
+            digits = digits.replace("1", "");
+        }
+
         //limitation of 4 digits only
         if (0 >= digits.length() || digits.length() > 4)
             throw new outOfScope("please try to enter more than 0 digit and less than 4 digits");
 
-        //in case the user enter these numbers
-        //could have used [digits ==("1") || digits == ("11") ...] but it would be longer
-        if (digits.matches("1|11|111|1111") ) {
-            throw new outOfScope("please try again with different number than 1 (no characters are linked to this number)");
-        }
-
-        //in case the user enters a digits that include 1, then it will be removed and not return empty list
-        if (digits.contains("1")){
-            digits = digits.replace("1", "");
-        }
         char[] arr = new char[digits.length()];
-        helper(digits, 0, numWithChar, result, arr);
+        DFS(digits, 0, numWithChar, result, arr);
         return result;
     }
 
-    private static void helper(String digits, int index, HashMap<Character, char[]> dict, List<String> result, char[] arr) {
+    private static void DFS(String digits, int index, HashMap<Character, char[]> dict, List<String> result, char[] arr) {
         if (index == digits.length()) {
             result.add(new String(arr));
             return;
@@ -57,11 +65,11 @@ public class Main {
         for (int i = 0; i < candidates.length; i++) {
             arr[index] = candidates[i];
             // to keep adding the characters
-            helper(digits, index + 1, dict, result, arr);
+            DFS(digits, index + 1, dict, result, arr);
         }
     }
 
     public static void main(String[] args) throws outOfScope {
-        System.out.print(letterCombinations("62"));
+        System.out.println(letterCombinations("23"));
     }
 }
