@@ -96,32 +96,30 @@ public class PhoneNumTest {
     }
 
 
-
     @Test
     public void containsSpecialCaseOnly() {
-        Throwable exception = assertThrows(outOfScope.class, () -> {
+        assertThrows(outOfScope.class, () -> {
             Main.letterCombinations("$%^&");
         });
     }
 
     @Test
     public void containsAlphabetOnly() {
-        Throwable exception = assertThrows(outOfScope.class, () -> {
+        assertThrows(outOfScope.class, () -> {
             Main.letterCombinations("aaa");
         });
     }
 
     @Test
     public void longInput() {
-        Throwable exception = assertThrows(outOfScope.class, () -> {
+        assertThrows(outOfScope.class, () -> {
             Main.letterCombinations("326666");
         });
     }
 
     @Test
     public void nullInput() {
-
-        Throwable exception = assertThrows(outOfScope.class, () -> {
+        assertThrows(outOfScope.class, () -> {
             Main.letterCombinations("");
         });
     }
