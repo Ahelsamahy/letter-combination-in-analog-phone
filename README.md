@@ -21,27 +21,84 @@ Also it was a good practice to make test cases in new a language as Java (despit
 2. Constraints on the input digits :
 
 <ul style="margin-top:-1rem; margin-left:1rem;">
-<li>Input can't be less than 1 digit and more than 4 digits
-<li>The phone dial-pad doesn't have a character on the 1 button, so the app will remove (or replace with nothing 😉) it from the input.
-<li>In case input has only 1('s) then it will throw a custom made exception `outOfScope()`. 
+<li>If the input has a special case or letter, then it will be removed.</li>
+<li>Search the whole input using RegEx.</li>
+<li>Input can't be less than 0 digit and more than 4 digits.</li>
+<li>The phone dial-pad doesn't have a character on the 1 button, so the app will remove (or replace with nothing 😉) it from the input.</li>
+<li>In case input has only 1('s) then it will throw a custom made exception `outOfScope()`. </li>
 </ul>
 
-3. Calls the function `helper()` that will do the tree operation of having every character make a different concatenation with the others (in case of multi digits entered as input).
+3. Calls the function `DFS()` that will do the tree operation of having every character make a different concatenation with the others (in case of multi digits entered as input).
 
-There are **5 unit tests** made to make sure it covers as many possibilities for input (including exceptions).
+There are **16 unit tests** made to make sure it covers as many possibilities for input (including exceptions).
 
 <img style="border-radius:10px;" align="right" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/unitTest.jpg?raw=true" title="successful test cases" >
 
-removeThe1s(): get rid of the 1('s).
 
-longInput(): throw of exception in the case of more than 4 digits as input.
+<div style="width:fit-content;">
 
-test1Number(): just the normal output when 1 digit is entered.
+<table>
+<thead>
+	<tr>
+		<th>Input test</th>
+		<th>Trigger exception</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>input1Number()</td>
+		<td>containsSpecialCaseOnly()</td>
+	</tr>
+	<tr>
+		<td>input2Numbers()</td>
+		<td>containsAlphabetOnly()</td>
+	</tr>
+	<tr>
+		<td>input3Numbers()</td>
+		<td>longInput()</td>
+	</tr>
+	<tr>
+		<td>input4Numbers()</td>
+		<td>nullInput()</td>
+	</tr>
+	<tr>
+		<td>removeThe1s()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>containsAlphabet()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>containsAlphabets()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>containsSpecialCase()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>containsSpecialCases()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>startsWithSpecialCase()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>startsWithCapitalAlphabet()</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>containsAlphabetWithSpecialCase()</td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
 
-nullInput(): throw exception when there is no input.
 
-test2Numbers(): more output to be tested in case of entering  2 digits.
 
+</div>
 
 
 > ⚠️ If somehow you can't add the library for test cases (like me) then follow [this][1] guide to add it manually.
