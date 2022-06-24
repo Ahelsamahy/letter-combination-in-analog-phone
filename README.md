@@ -32,74 +32,24 @@ Also it was a good practice to make test cases in new a language as Java (despit
 
 There are **16 unit tests** made to make sure it covers as many possibilities for input (including exceptions).
 
-<img style="border-radius:10px;" align="right" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/unitTest.jpg?raw=true" title="successful test cases" >
+<center>
+<img style="border-radius:10px;" src="https://github.com/Ahelsamahy/letter-combination-in-analog-phone/blob/main/usedMaterial/unitTest.jpg?raw=true" title="successful test cases" >
+</center>
 
-
-<div style="width:fit-content;">
-
-<table>
-<thead>
-	<tr>
-		<th>Input test</th>
-		<th>Trigger exception</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>input1Number()</td>
-		<td>containsSpecialCaseOnly()</td>
-	</tr>
-	<tr>
-		<td>input2Numbers()</td>
-		<td>containsAlphabetOnly()</td>
-	</tr>
-	<tr>
-		<td>input3Numbers()</td>
-		<td>longInput()</td>
-	</tr>
-	<tr>
-		<td>input4Numbers()</td>
-		<td>nullInput()</td>
-	</tr>
-	<tr>
-		<td>removeThe1s()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>containsAlphabet()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>containsAlphabets()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>containsSpecialCase()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>containsSpecialCases()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>startsWithSpecialCase()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>startsWithCapitalAlphabet()</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>containsAlphabetWithSpecialCase()</td>
-		<td></td>
-	</tr>
-</tbody>
-</table>
-
-
-
-</div>
-
+| Input test                      | Trigger exception           |
+|---------------------------------|-----------------------------|
+|input1Number()                   |containsSpecialCaseOnly()    |
+|input2Numbers()                  |containsAlphabetOnly()       |
+|input3Numbers()                  |longInput()                  |
+|input4Numbers()                  |nullInput()                  |
+|removeThe1s()                    |                             |
+|containsAlphabet()               |                             |
+|containsAlphabets()              |                             |
+|containsSpecialCase()            |                             |
+|containsSpecialCases()           |                             |
+|startsWithSpecialCase()          |                             |
+|startsWithCapitalAlphabet()      |                             |
+|containsAlphabetWithSpecialCase()|                             |
 
 > ⚠️ If somehow you can't add the library for test cases (like me) then follow [this][1] guide to add it manually.
 
