@@ -16,6 +16,7 @@ public class Main {
         //digits are the key and their equivalent of character are the value
         HashMap<Character, char[]> numWithChar = new HashMap<Character, char[]>();
 
+        numWithChar.put('0', new char[]{});
         numWithChar.put('1', new char[]{});                 //added it so I can throw a user-friendly exception
         numWithChar.put('2', new char[]{'a', 'b', 'c'});
         numWithChar.put('3', new char[]{'d', 'e', 'f'});
@@ -70,6 +71,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws outOfScope {
-        System.out.println(letterCombinations("23"));
+        System.out.println(letterCombinations("0000"));
     }
 }
