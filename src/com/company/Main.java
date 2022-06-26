@@ -48,7 +48,7 @@ public class Main {
         }
 
         //limitation of 4 digits only
-        if (0 >= digits.length() || digits.length() > 4)
+        if (0 > digits.length() || digits.length() > 4)
             throw new outOfScope("please try to enter more than 0 digit and less than 4 digits");
 
         char[] arr = new char[digits.length()];
@@ -71,6 +71,6 @@ public class Main {
     }
 
     public static void main(String[] args) throws outOfScope {
-        System.out.println(letterCombinations("0000"));
+        System.out.println(letterCombinations(""));
     }
 }
